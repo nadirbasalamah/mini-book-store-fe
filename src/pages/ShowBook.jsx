@@ -12,7 +12,7 @@ const ShowBook = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:5555/api/v1/books/${id}`)
+      .get(`https://alta-mini-book-store.onrender.com/api/v1/books/${id}`)
       .then((response) => {
         setBook(response.data);
         setLoading(false);

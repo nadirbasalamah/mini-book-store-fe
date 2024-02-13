@@ -23,7 +23,7 @@ const CreateBook = () => {
     setLoading(true);
 
     axios
-      .post("http://localhost:5555/api/v1/books", data)
+      .post("https://alta-mini-book-store.onrender.com/api/v1/books", data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Book created successfully", { variant: "success" });

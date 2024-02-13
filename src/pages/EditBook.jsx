@@ -17,7 +17,7 @@ const EditBook = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:5555/api/v1/books/${id}`)
+      .get(`https://alta-mini-book-store.onrender.com/api/v1/books/${id}`)
       .then((response) => {
         setTitle(response.data.title);
         setAuthor(response.data.author);
@@ -40,7 +40,7 @@ const EditBook = () => {
     setLoading(true);
 
     axios
-      .put(`http://localhost:5555/api/v1/books/${id}`, data)
+      .put(`https://alta-mini-book-store.onrender.com/api/v1/books/${id}`, data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Book edited successfully", { variant: "success" });

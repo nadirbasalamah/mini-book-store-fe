@@ -14,7 +14,7 @@ const Home = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("http://localhost:5555/api/v1/books")
+      .get("https://alta-mini-book-store.onrender.com/api/v1/books")
       .then((response) => {
         setBooks(response.data.data);
         console.log(books);
